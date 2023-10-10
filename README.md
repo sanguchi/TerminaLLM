@@ -17,21 +17,21 @@ _Note:  models should be folders inside /models_
 
 
 #### Loaders:  
--[x] Transformers  
--[x] ExLlama  
--[x] ExLlamaV2  
--[x] AutoAWQ  
--[ ] AutoGPTQ  
--[ ] llama.cpp  
--[ ] ???  
+- [x] Transformers  
+- [x] ExLlama  
+- [x] ExLlamaV2  
+- [x] AutoAWQ  
+- [ ] AutoGPTQ  
+- [ ] llama.cpp  
+- [ ] ???  
 
 #### Frontends:  
--[x] Single line Input  
--[x] Multiline TextArea for LLM colab editing  
--[x] Side by Side Multiline TextArea and Output
--[x] Chat style  
--[ ] LLM Assisted code editor  
--[ ] Tree branch conversation exploring  
+- [x] Single line Input  
+- [x] Multiline TextArea for LLM colab editing  
+- [x] Side by Side Multiline TextArea and Output
+- [x] Chat style  
+- [ ] LLM Assisted code editor  
+- [ ] Tree branch conversation exploring  
 
 #### TODO:  
 - Template settings
