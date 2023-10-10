@@ -1,0 +1,21 @@
+textual==0.38.1
+
+
+
+# Source: https://github.com/jllllll/exllama/releases
+# EXLLAMA CUDA 121 PYTHON 3.10
+https://github.com/jllllll/exllama/releases/download/0.0.17/exllama-0.0.17+cu121-cp310-cp310-win_amd64.whl; platform_system == "Windows"
+https://github.com/jllllll/exllama/releases/download/0.0.17/exllama-0.0.17+cu121-cp310-cp310-linux_x86_64.whl; platform_system == "Linux" and platform_machine == "x86_64"
+
+# Source: https://github.com/turboderp/exllamav2/releases
+# EXLLAMAV2 CUDA 121 PYTHON 3.10
+https://github.com/turboderp/exllamav2/releases/download/v0.0.5/exllamav2-0.0.5+cu121-cp310-cp310-win_amd64.whl; platform_system == "Windows"
+https://github.com/turboderp/exllamav2/releases/download/v0.0.5/exllamav2-0.0.5+cu121-cp310-cp310-linux_x86_64.whl; platform_system == "Linux" and platform_machine == "x86_64"
+
+# AutoAWQ, compilar en windows.
+git+https://github.com/casper-hansen/AutoAWQ; platform_system == "Windows"
+autoawq; platform_system == "Linux" and platform_machine == "x86_64"
+
+# Transformers para cargar modelos sin quantizar
+transformers
+accelerate

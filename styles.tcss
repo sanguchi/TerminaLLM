@@ -1,0 +1,124 @@
+/* MODAL TO SELECT MODEL AND LOADER */
+LoaderModal {
+    align: center middle;
+}
+LoaderModal Grid {
+    width: 50%;
+    height: auto;
+    grid-size: 2 4;
+    grid-rows: 3 3 3 3;
+    border: $success heavy;
+    padding: 1 1 0 1;
+}
+LoaderModal Select {
+    column-span: 2;
+}
+LoaderModal Placeholder {
+    column-span: 2;
+    width: 0;
+}
+LoaderModal LoadingIndicator {
+    column-span: 2;
+    height: 100%;
+}
+LoaderModal Button {
+    width: 100%;
+    margin: 0 1 0 1;
+}
+
+/* MODAL TO SELECT TEMPLATE AND FRONTEND */
+LayoutModal {
+    align: center middle;
+}
+LayoutModal Grid {
+    width: 50%;
+    height: auto;
+    grid-size: 2 4;
+    grid-rows: 3 3 3 3;
+    border: $success heavy;
+    padding: 1 1 0 1;
+}
+LayoutModal Select {
+    column-span: 2;
+}
+LayoutModal Placeholder {
+    column-span: 2;
+    width: 0;
+}
+LayoutModal Button {
+    width: 100%;
+    margin: 0 1 0 1;
+}
+
+/* MODAL TO ALERT NO MODEL IS LOADED YET */
+NoModelScreen {
+    align: center middle;
+}
+NoModelScreen Grid {
+    width: 40%;
+    height: auto;
+    grid-size: 1 2;
+    grid-rows: 4 3;
+    border: $warning heavy;
+}
+NoModelScreen Label {
+    text-align: center;
+    width: 100%;
+    margin: 1 0 1 0;
+}
+NoModelScreen Button {
+    width: 100%;
+    margin: 1 10 0 10;
+}
+
+/* FRONTENDSINGLEPANEL STYLE */
+FrontendSinglePanel TextArea {
+    border: $accent heavy;
+}
+FrontendSinglePanel Input {
+    display: none;
+}
+
+/* FRONTEND BASE STYLE */
+FrontendBase Input {
+    margin: 1 0 1 0;
+    padding: 0 0 0 1;
+}
+FrontendBase Label {
+    width: 100%;
+    margin: 0 1 1 1;
+}
+FrontendBase Rule {
+    margin: 0 2;
+}
+
+/* FRONTEND DUAL STYLE */
+FrontendDualPanels Grid {
+    grid-size: 1 2;
+}
+FrontendDualPanels TextArea {
+    border: $primary heavy;
+}
+FrontendDualPanels VerticalScroll {
+    border: $primary heavy;
+}
+
+/* FRONTENDCHAT STYLE */
+FrontendChat {
+    # background: red;
+}
+FrontendChat Static {
+    padding: 0 1 0 1;
+}
+FrontendChat Input {
+    margin: 1 1 1 1;
+    padding: 0 1 0 1;
+}
+FrontendChat Static.human {
+    border: heavy $accent;
+    margin: 0 0 0 4;
+}
+FrontendChat Static.model {
+    border: heavy $success;
+    margin: 0 4 0 0;
+}

@@ -1,0 +1,7 @@
+/.vscode/
+/.idea/
+__pycache__
+models/*
+!models/Place your model folders here.txt
+loaders/*_test.py
+notas.txt
