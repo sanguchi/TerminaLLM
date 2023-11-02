@@ -122,3 +122,76 @@ FrontendChat Static.model {
     border: heavy $success;
     margin: 0 4 0 0;
 }
+
+/* SETTINGS */
+GlobalSettings VerticalScroll{
+    padding: 2 1 0 1;
+    border: heavy $warning;
+}
+GlobalSettings Horizontal {
+    width: 100%;
+    height: auto;
+    align: center middle;
+}
+
+GlobalSettings Horizontal Label{
+    height: 3;
+    content-align: center middle;
+    width: auto;
+}
+
+/* EXLLAMAV2 SETTINGS */
+ExLlamaV2Settings > Grid {
+    grid-size: 4 2;
+    align: center middle;
+    height: auto;
+}
+ExLlamaV2Settings > Grid #label_title {
+    border: heavy $accent;
+    column-span: 4;
+    width: 90%;
+    text-align: center;
+}
+ExLlamaV2Settings > Grid #label_model {
+    column-span: 1;
+    content-align: center middle;
+    width: 100%;
+    height: 3;
+}
+ExLlamaV2Settings > Grid > Input {
+    column-span: 3;
+    width: auto;
+}
+
+ExLlamaV2Settings > VerticalScroll > Grid {
+    grid-size: 2;
+    height: auto;
+}
+
+/* AWQ SETTINGS */
+AWQSettings > Grid {
+    grid-size: 4 2;
+    align: center middle;
+    height: auto;
+}
+AWQSettings > Grid #label_title {
+    border: heavy $accent;
+    column-span: 4;
+    width: 90%;
+    text-align: center;
+}
+AWQSettings > Grid #label_model {
+    column-span: 1;
+    content-align: center middle;
+    width: 100%;
+    height: 3;
+}
+AWQSettings > Grid > Input {
+    column-span: 3;
+    width: auto;
+}
+
+AWQSettings > VerticalScroll > Grid {
+    grid-size: 2;
+    height: auto;
+}

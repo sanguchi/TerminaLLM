@@ -1,4 +1,5 @@
 ## TerminaLLM  
+![](Captura.PNG)
 Another frontend for local LLMs  
 Powered by [Textual](https://textual.textualize.io/)  
 

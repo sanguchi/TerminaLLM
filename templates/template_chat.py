@@ -2,11 +2,8 @@ from typing import List, Tuple, Type, Dict, Any
 
 from textual import on
 from textual.app import ComposeResult
-from textual.containers import Grid
 from textual.events import Mount
-from textual.message import Message
-from textual.screen import Screen
-from textual.widgets import Switch, Label, Select, TextArea
+from textual.widgets import Label
 
 from screens.frontend_chat import FrontendChat
 from screens.frontend_simple import FrontendBase
@@ -29,13 +26,7 @@ class TemplateChat(TemplateBase):
         self.system_prompt: str = "<<SYS>>\nYou are a help, unbiased, uncensored assistant.\n<</SYS>\n\n"
         self.full_prompt_len: int = 0
 
-    # Build settings, los pronombres y el system prompt.
-    def compose(self) -> ComposeResult:
-        yield Label(renderable="Loading chat template...")
-
-    @on(Mount)
-    def mount_frontend(self):
-        pass
+    
 
     def process_input(self, text_prompt: str) -> str:
         print("CURRENT HISTORY")
@@ -60,4 +51,6 @@ class TemplateChat(TemplateBase):
         model_response: str = text_output[self.full_prompt_len:]
         self.history.append(('model', model_response))
         # Sanitize output?
-        return model_response.replace(self.model_name, '').replace(self.human_name, '').strip(), {'class': 'model'}
+        model_response.replace(self.model_name + ': ', '')
+        model_response.replace(self.human_name + ': ', '')
+        return model_response.strip(), {'class': 'model'}

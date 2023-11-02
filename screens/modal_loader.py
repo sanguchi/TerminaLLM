@@ -5,6 +5,7 @@ from textual import on, work
 from textual.app import ComposeResult
 from textual.containers import Grid
 from textual.events import Mount
+from textual.message import Message
 from textual.screen import ModalScreen
 from textual.widgets import Select, Button, LoadingIndicator, Placeholder
 from textual.worker import Worker
@@ -46,7 +47,11 @@ except Exception as e:
 # Por más contra intuitivo que sea, este widget es el que almacena el modelo.
 # Aca se elige y se carga el modelo.
 class LoaderModal(ModalScreen):
-
+    class ModelChanged(Message):
+        def __init__(self, model_name: str, model_loader: loaders.loader_generic.LoaderModel):
+            self.model_name = model_name
+            self.model_loader = model_loader
+            super().__init__()
     def __init__(self):
         super().__init__()
         file_list = os.listdir('models')
@@ -114,8 +119,9 @@ class LoaderModal(ModalScreen):
             self.query_one(LoadingIndicator).remove()
             self.query_one(Placeholder).styles.display = 'block'
             if self.model_name:  # Poner el nombre del modelo cargado como estado
-                self.app.bind(keys='f1', action='model_selection', description=self.model_name)
-            self.app.pop_screen()  # Cerrar el modal automáticamente
+                self.post_message(LoaderModal.ModelChanged(model_name=self.model_name, model_loader=self.model))
+
+            self.dismiss()  # Cerrar el modal automáticamente
 
     @work(exclusive=True, thread=True)
     async def load_model(self):
